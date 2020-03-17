@@ -1,0 +1,137 @@
+.videoPlayer {
+  position: relative;
+  text-align: center;
+}
+
+.videoPlayer:hover .videoPlayer__controls {
+  opacity: 0.3;
+}
+
+.videoPlayer video {
+  width: 100%;
+  max-width: 100%;
+}
+
+.videoPlayer .videoPlayer__controls {
+  margin-bottom: 20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  opacity: 0;
+  -webkit-transition: opacity 0.4s linear;
+  transition: opacity 0.4s linear;
+  color: white;
+  position: absolute;
+  z-index: 9;
+  bottom: 5px;
+  width: 80%;
+  background-color: gray;
+  padding: 20px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 16px;
+}
+
+.videoPlayer .videoPlayer__controls .videoPlayer__column:first-child {
+  width: 20%;
+  margin-left: 50px;
+}
+
+.videoPlayer .videoPlayer__controls .videoPlayer__column:first-child #jsVolumeBtn {
+  margin-right: 10px;
+}
+
+.videoPlayer .videoPlayer__controls .videoPlayer__volume {
+  position: absolute;
+  padding: 0;
+  opacity: 1;
+  top: -60px;
+  right: 74px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  z-index: 10;
+  width: 80px;
+}
+
+.videoPlayer .videoPlayer__controls .videoPlayer__volume input {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.videoPlayer .videoPlayer__controls .videoPlayer__volume input::-webkit-slider-runnable-track {
+  background-color: grey;
+  height: 5px;
+}
+
+.videoPlayer .videoPlayer__controls .videoPlayer__volume input::-webkit-slider-thumb {
+  all: unset;
+  background-color: red;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  position: relative;
+  top: -5px;
+}
+
+.videoPlayer .videoPlayer__controls .videoPlayer__column .rangeBar {
+  width: 600px;
+}
+
+.videoPlayer .videoPlayer__controls .videoPlayer__column:last-child {
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+.videoPlayer .videoPlayer__controls .videoPlayer__column:last-child .timeStamp {
+  margin-right: 20px;
+}
+
+.videoPlayer .videoPlayer__controls .videoPlayer__column:last-child .volumeIcon {
+  margin-right: 20px;
+}
+
+.videoPlayer .videoPlayer__controls .videoPlayer__column:last-child .fullScreenIcon {
+  margin-right: 50px;
+}
+
+.videoPlayer .videoPlayer__controls i {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.videoPlayer .videoPlayer__controls .videoPlayer__column-1 {
+  margin-left: 50px;
+}
+
+.videoPlayer .videoPlayer__controls .videoPlayer__column-2 {
+  width: 70%;
+}
+
+.videoPlayer .videoPlayer__controls .videoPlayer__column-2 input {
+  width: 100%;
+}
+
+.videoPlayer .videoPlayer__controls .videoPlayer__column-3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.videoPlayer .videoPlayer__controls .videoPlayer__column-3 .timeStamp {
+  margin-right: 20px;
+}
+
+.videoPlayer .videoPlayer__controls .videoPlayer__column-3 .volumeIcon {
+  margin-right: 20px;
+}
+
+.videoPlayer .videoPlayer__controls .videoPlayer__column-3 .fullScreenIcon {
+  margin-right: 50px;
+}
+/*# sourceMappingURL=main.css.map */

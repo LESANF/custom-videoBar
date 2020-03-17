@@ -1,0 +1,111 @@
+.videoPlayer {
+  position: relative;
+  text-align: center;
+  &:hover {
+    .videoPlayer__controls {
+      opacity: 0.3;
+    }
+  }
+  video {
+    width: 100%;
+    max-width: 100%;
+  }
+  .videoPlayer__controls {
+    margin-bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.4s linear;
+    color: white;
+    position: absolute;
+    z-index: 9;
+    bottom: 5px;
+    width: 80%;
+    background-color: gray;
+    // background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    // display: grid;
+    // grid-template-columns: repeat(3, 1fr);
+    font-size: 16px;
+    .videoPlayer__column:first-child {
+      width: 20%;
+      margin-left: 50px;
+      #jsVolumeBtn {
+        margin-right: 10px;
+      }
+    }
+    .videoPlayer__volume {
+      position: absolute;
+      padding: 0;
+      opacity: 1;
+      top: -60px;
+      right: 74px;
+      transform: rotate(-90deg);
+      z-index: 10;
+      width: 80px;
+
+      input {
+        background-color: rgba(0, 0, 0, 0.7);
+        &::-webkit-slider-runnable-track {
+          background-color: grey;
+          height: 5px;
+        }
+        &::-webkit-slider-thumb {
+          all: unset;
+          background-color: red;
+          height: 15px;
+          width: 15px;
+          border-radius: 50%;
+          position: relative;
+          top: -5px;
+        }
+      }
+    }
+
+    .videoPlayer__column .rangeBar {
+      width: 600px;
+    }
+    .videoPlayer__column:last-child {
+      justify-self: end;
+      .timeStamp {
+        margin-right: 20px;
+      }
+      .volumeIcon {
+        margin-right: 20px;
+      }
+      .fullScreenIcon {
+        margin-right: 50px;
+      }
+    }
+    .videoPlayer__column:nth-child(2) {
+    }
+    i {
+      font-size: 20px;
+      cursor: pointer;
+    }
+    .videoPlayer__column-1 {
+      margin-left: 50px;
+    }
+    .videoPlayer__column-2 {
+      width: 70%;
+      input {
+        width: 100%;
+      }
+    }
+    .videoPlayer__column-3 {
+      display: flex;
+      justify-content: space-between;
+      .timeStamp {
+        margin-right: 20px;
+      }
+      .volumeIcon {
+        margin-right: 20px;
+      }
+      .fullScreenIcon {
+        margin-right: 50px;
+      }
+    }
+  }
+}
